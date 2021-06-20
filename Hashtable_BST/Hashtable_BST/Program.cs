@@ -29,6 +29,8 @@ namespace Hashtable_BST
             Console.WriteLine(hash.GetV("5").GetHashCode());
             Console.WriteLine(hash.GetV("0").GetHashCode());
             Console.WriteLine($"size is:"+hash.GetSize());
+            hash.Remove("10");
+            Console.WriteLine($"size is:" + hash.GetSize());
 
         }
     }

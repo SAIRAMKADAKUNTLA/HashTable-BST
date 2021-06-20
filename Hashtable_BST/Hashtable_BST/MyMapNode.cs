@@ -49,6 +49,25 @@ namespace Hashtable_BST
             KeyValue<K, V> item = new KeyValue<K, V>() { Key = key, Value = value };
             linkedlist.AddLast(item);
         }
+        public void Remove(K key)
+        {
+            int pos = GetArrayPosition(key);
+            LinkedList<KeyValue<K, V>> linkedlist = GetLinkedList(pos);
+            bool isFound = false;
+            KeyValue<K, V> foundItem = default;
+            foreach (KeyValue<K, V> item in linkedlist)
+            {
+                if (item.Key.Equals(key))
+                {
+                    isFound = true;
+                    foundItem = item;
+                }
+                if (isFound)
+                {
+                    linkedlist.Remove(foundItem);
+                }
+            }
+        }
         public int GetSize()
         {
             return size;
