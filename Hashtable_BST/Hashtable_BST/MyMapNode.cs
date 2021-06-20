@@ -49,6 +49,10 @@ namespace Hashtable_BST
             KeyValue<K, V> item = new KeyValue<K, V>() { Key = key, Value = value };
             linkedlist.AddLast(item);
         }
+        public int GetSize()
+        {
+            return size;
+        }
 
 
     }
